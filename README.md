@@ -1,71 +1,71 @@
 # Literary Style Transformer
 
-A system that transforms uploaded documents into the writing style of famous authors using AI.
+A Streamlit application that transforms your text into the style of famous authors using OpenAI's GPT models.
 
 ## Features
 
-- Upload PDF documents
-- Automatically extract and process text content
-- Transform the document into different author styles:
-  - William Shakespeare
-  - Edgar Allan Poe
-  - Fyodor Dostoevsky
-  - J.R.R. Tolkien
-  - Leo Tolstoy
-  - Johann Wolfgang von Goethe
-  - Albert Camus
-  - Franz Kafka
-- Modern UI with original and transformed text display
+- Transform any text into the style of famous authors like Ernest Hemingway, Jane Austen, Charles Dickens, and more
+- Adjust the intensity of the style transformation
+- Simple and intuitive user interface
+- Download transformed text
 
-## Setup
+## Installation
 
-1. Clone this repository
-   ```
-   git clone https://github.com/yourusername/literary-style-transformer.git
-   cd literary-style-transformer
-   ```
+1. Clone this repository:
+```bash
+git clone https://github.com/yourusername/literary-style-transformer.git
+cd literary-style-transformer
+```
 
-2. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+2. Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-3. Create a `.env` file in the project root with your OpenAI API key:
-   ```
-   cp .env.example .env
-   # Then edit .env and add your OpenAI API key
-   ```
+3. Create a `.env` file in the root directory and add your OpenAI API key:
+```
+OPENAI_API_KEY=your_api_key_here
+```
 
 ## Usage
 
 1. Run the Streamlit app:
-   ```
-   streamlit run app.py
-   ```
-2. Open your web browser and navigate to the local URL displayed in the terminal (typically http://localhost:8501)
-3. Upload a PDF file and click "Process Document"
-4. Select an author style from the sidebar
-5. Click "Transform" to see your document rewritten in the selected author's style
+```bash
+streamlit run app.py
+```
 
-## How it Works
+2. Open your web browser and navigate to the URL shown in the terminal (usually http://localhost:8501)
 
-1. **PDF Processing**: The system extracts text from the uploaded PDF.
-2. **Text Transformation**: When a style is selected, the system:
-   - Uses a specialized prompt for the selected author
-   - Sends the document text and prompt to an LLM (GPT-3.5 Turbo)
-   - Returns the transformed text in the author's unique style
+3. Select an author from the dropdown menu in the sidebar
+
+4. Adjust the style intensity using the slider (1 = subtle, 10 = extreme)
+
+5. Enter your text in the text area on the left
+
+6. Click the "Transform Text" button to see your text transformed into the selected author's style
+
+7. Download the transformed text using the download button
+
+## Available Authors
+
+- Ernest Hemingway
+- Jane Austen
+- Charles Dickens
+- Virginia Woolf
+- Mark Twain
+- William Shakespeare
 
 ## Technologies Used
 
-- LangChain: Framework for working with LLMs
-- OpenAI: For text generation and transformation
-- Streamlit: Web interface for user interaction
-- PyPDF: PDF text extraction
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+- [Streamlit](https://streamlit.io/) - Web application framework
+- [OpenAI API](https://openai.com/api/) - For text transformation
+- [Python-dotenv](https://github.com/theskumar/python-dotenv) - For environment variable management
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- OpenAI for providing the GPT models
+- The authors whose styles are emulated in this application 
